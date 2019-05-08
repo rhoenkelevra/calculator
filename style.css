@@ -1,62 +1,76 @@
 
+:root {
+--bg-primary:#111;
+--bg-secondary: #666;
+--bg-accent: orange;
+--cl-primary: #fff;
+}
 
 *{
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 body{
-	background-color: lightblue;
+	background: lightblue;
 }
 .container{
-	text-align: center;
 	margin: 15% auto;
 	max-width: 400px;
-	max-height: 500px;
-	border: 2px solid red;
-	padding: 0;
-	background: rgb(131,58,180);
-	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	max-height: 600px;
+	padding: 12px 6px;
+	background: var(--bg-primary);
 }
 
 .textview {
 	padding: 5px;
 	width: 100%;
 	height: 100px;
-	margin: 0;
-	color: #333;
-	font-size: 36px;
-	text-align: right
+	margin-bottom: 15px;
+	color: var(--cl-primary);
+	background: var(--bg-primary);
+	border: none;
+	font-size: 3em;
+	text-align: right;
 }
 .calc-buttons{
 	margin: 0;
 	display: grid;
 	grid-template-rows: repeat(5, 1fr);
 	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 0
+	grid-gap: 5px;
+
 }
 
 .button {
-	background: none;
 	border: 1px solid black;
 	box-shadow: none;
-	width: 99px;
-	height: 75px;
-	font-size: 25px;
-	cursor: pointer
+	width: 3.5em;
+	height: 3.5em;
+	border-radius: 50%;
+	font-size: 24px;
+	cursor: pointer;
+	background: var(--bg-secondary);
+	color: var(--cl-primary);
 }
 .button:hover{
 	background-color: red;
 }
 
 .operators{
-	color: #fff;
+	color: var(--cl-primary);
+	background: var(--bg-accent);
+
 }
 
 #zeroBtn {
 	grid-column: span 2;
-	width: 198px;
+	width: 180px;
+	border-radius: 70px;
 }
 
 #equalBtn {
 	grid-row: span 2;
-	height: 150px;
+	height: 170px;
+	border-radius: 70px;
 }
